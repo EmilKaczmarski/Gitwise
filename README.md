@@ -1,4 +1,4 @@
-# Gitwise
+# Application Requirements:
 
 Using the Swift language, write an application that meets the following requirements:
   
