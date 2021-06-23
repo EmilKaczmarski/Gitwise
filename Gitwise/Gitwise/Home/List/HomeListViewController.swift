@@ -37,9 +37,7 @@ final class HomeListViewController: GitwiseViewController {
 
 //MARK: - TableViewMethods
 
-extension HomeListViewController: UITableViewDelegate {
-
-}
+extension HomeListViewController: UITableViewDelegate { }
 
 //MARK: - UI setup
 
@@ -131,14 +129,13 @@ private extension HomeListViewController {
     }
     
     func setupViews() {
-        view.addSubview(tableView)
-        view.addSubview(filterView)
-        filterView.isHidden = true
+        [tableView, filterView].forEach(view.addSubview)
+        tableView.contentInset = .init(top: 100, left: 0, bottom: 0, right: 0)
         tableView.register(HomeInfoCell.self)
         tableView.separatorStyle = .none
-        tableView.contentInset = .init(top: 150, left: 0, bottom: 0, right: 0)
-        
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.scrollToTop()
+        
         navigationController?.navigationBar.isHidden = true
         view.backgroundColor = .wiseLightGrey
     }

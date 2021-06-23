@@ -35,29 +35,32 @@ final class NetworkClient: NetworkClientProtocol {
             let cachedData: Response? = self?.cacheManager.read()
             if let cachedData = cachedData {
                 single(.success(cachedData))
-                
             } else {
-                 
-                self?.provider.request(.target(target)) { result in
-
-                    switch result {
-                        case .success(let response):
-                            do {
-                                let model = try JSONDecoder().decode(Response.self, from: response.data)
-                                self?.cacheManager.store(data: model, for: storageTime)
-                                single(.success(model))
-                            } catch {
-                                single(.failure(NetworkError.decoding("Decoding error of type: \(Response.self)")))
-                            }
-                            
-                        case .failure(let error):
-                            single(.failure(error))
-                    }
-                }
-                    
+                self?.createRequest(target: target, for: storageTime, completion: single)
             }
             
             return Disposables.create()
+        }
+    }
+    
+    private func createRequest<Target: TargetType, Response: Codable>(target: Target,
+                                                                      for storageTime: StorageTime,
+                                                                      completion: @escaping ((Result<Response, Error>) -> Void)) {
+        
+        provider.request(.target(target)) { [weak self] result in
+            switch result {
+                case .success(let response):
+                    do {
+                        let model = try JSONDecoder().decode(Response.self, from: response.data)
+                        self?.cacheManager.store(data: model, for: storageTime)
+                        completion(.success(model))
+                    } catch {
+                        completion(.failure(NetworkError.decoding("Decoding error of type: \(Response.self)")))
+                    }
+                    
+                case .failure(let error):
+                    completion(.failure(error))
+            }
         }
     }
 }
