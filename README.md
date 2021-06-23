@@ -1,3 +1,20 @@
+# Application Overview:
+
+# Screenshots:
+|  |  |
+| --- | --- |
+|![Simulator Screen Shot - iPhone 11 Pro - 2021-06-23 at 12 34 09](https://user-images.githubusercontent.com/51459339/123084245-34379800-d421-11eb-902a-acffcfdef05e.png)|![Simulator Screen Shot - iPhone 11 Pro - 2021-06-23 at 12 35 09](https://user-images.githubusercontent.com/51459339/123084254-3568c500-d421-11eb-950a-c82f63081616.png)|
+|![Simulator Screen Shot - iPhone 11 Pro - 2021-06-23 at 12 34 11](https://user-images.githubusercontent.com/51459339/123084345-4c0f1c00-d421-11eb-9536-c342a7d31809.png)|![Simulator Screen Shot - iPhone 11 Pro - 2021-06-23 at 12 34 46](https://user-images.githubusercontent.com/51459339/123084354-4f0a0c80-d421-11eb-8641-57bf588f047a.png)|
+
+# Recordings:
+
+https://user-images.githubusercontent.com/51459339/123085124-32ba9f80-d422-11eb-96fd-69fb7a4fd393.mov
+
+https://user-images.githubusercontent.com/51459339/123085137-35b59000-d422-11eb-936e-b8ba676d27e5.mov
+
+https://user-images.githubusercontent.com/51459339/123085147-377f5380-d422-11eb-9a13-20f909bbbcb7.mov
+
+
 # Application Requirements:
 
 Using the Swift language, write an application that meets the following requirements:
