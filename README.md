@@ -1,5 +1,5 @@
 # Application Overview:
-Simple application written in rx swift that is showing users from 2 apis.
+Simple application used for recruitement process that is written in rx swift and is showing users from 2 apis.
 
 # Screenshots:
 |  |  |
