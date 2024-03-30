@@ -1,5 +1,5 @@
 # Application Overview:
-Simple application used for recruitement process that is written in rx swift and is showing users from 2 apis.
+This is a simple application written in Rx Swift for the recruitment process from 2021. It shows users from 2 APIs.
 
 # Screenshots:
 |  |  |
